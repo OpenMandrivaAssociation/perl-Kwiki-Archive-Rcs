@@ -17,6 +17,7 @@ BuildRequires:	perl-devel
 BuildRequires:	perl(Kwiki)
 requires:	rcs
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Version control using RCS.
