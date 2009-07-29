@@ -1,29 +1,29 @@
-%define module	Kwiki-Archive-Rcs
-%define name	perl-%{module}
-%define version 0.15
-%define release %mkrel 7
+%define upstream_name	 Kwiki-Archive-Rcs
+%define upstream_version 0.15
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Kwiki Page Archival Using RCS
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Kwiki/%{module}-%{version}.tar.bz2
-URL:		http://search.cpan.org/dist/%{module}/
 License:	GPL
 Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Kwiki/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildRequires:	perl(Kwiki)
-requires:	rcs
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+requires:	rcs
 
 %description
 Version control using RCS.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,4 +44,3 @@ Version control using RCS.
 %doc Changes README
 %{perl_vendorlib}/Kwiki
 %{_mandir}/*/*
-
