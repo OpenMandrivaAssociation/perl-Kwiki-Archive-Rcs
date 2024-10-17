@@ -8,7 +8,7 @@ Release:	4
 Summary:	Kwiki Page Archival Using RCS
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Kwiki/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
