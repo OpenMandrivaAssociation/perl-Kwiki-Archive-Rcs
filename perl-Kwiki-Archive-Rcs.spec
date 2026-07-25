@@ -2,14 +2,14 @@
 %define upstream_version 0.16
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	Kwiki Page Archival Using RCS
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Kwiki/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Kwiki-Archive-Rcs
+Source0:	https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Kwiki-Archive-Rcs-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
